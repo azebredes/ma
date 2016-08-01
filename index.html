@@ -50,13 +50,40 @@
           <div class="col-xs-12">
             <!-- header brand -->
             <div class="header-brand">
-          <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fazebredes.github.io%2Fma%2F&width=206&layout=button_count&action=like&size=small&show_faces=true&share=true&height=46&appId" width="206" height="46" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+              <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fazebredes.github.io%2Fma%2F&width=206&layout=button_count&action=like&size=small&show_faces=true&share=true&height=46&appId" width="206" height="46" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+            </div>
             <!-- header brand -->
+            <!-- header toggle
+            <div class="header-toggle">
+              <div id="menu-toggle" class="toggle">
+                <i class="ion-help"></i>
+              </div>
+            </div>-->
+            <!-- /header toggle -->
           </div>
         </div>
       </div>
     </header>
     <!-- /site header -->
+
+    <!-- info panel -->
+    <div id="form">
+      <div id="subscribe">
+        <div class="tb-cell">
+          <p class="animation section-subtitle">Együtt törjük át a végső határt.</p>
+          <h2 class="section-title">Az ébredés</h2>
+          <p class="animation section-subtitle">
+            Légy részese az emberiség utolsó mérföldkövének! 2016 szeptember elsején indul ‘Az Ébredés’ világrengető eseménysorozata, mely minden ember életét gyökeresen meg fogja változtatni, nincsenek kivételek. Az általunk ismert világkép alapjaiban esik darabjaira és áll össze újra, immáron a magasabb dimenziósíkú, egységes és tudatlanságtól mentes állapotában.
+          </p>
+          <div class="animation section-divider"></div>
+          <p class="animation section-subtitle">
+            Minden vallási nézet, hitvita, eredetünkről alkotott elméletek és az életünk részét képező 'idegen’ fajokról birtokolt tudásunk egy eddig sosem látott tényfeltáró eseményláncolat eredményeként teljesen át fog értékelődni. Minden eddigi feltételezésünk, amelyek meghatározták a hétköznapi életet hazugságon alapultak, ezen hamis tézisekkel és az igazság feltárásával kínálkozik az esemény. Az Ébredés közeledtéig még több információt fogok közölni, ez lesz AZ A NAP, amit az unokáinknak is mesélni fogunk, légy te is a történelem része és kövesd figyelemmel az első sorból nézve az emberiség következő szintre emelkedését
+          </p>
+          <div class="animation section-divider"></div>
+        </div>
+      </div>
+    </div>
+    <!-- /info panel -->
 
     <!-- site main -->
     <main id="site-main">
@@ -72,6 +99,8 @@
                   <h1 class="section-title">Az Ébredés</h1>
                   <p class="animation section-subtitle">mindenki élete megváltozik, új időszámítás kezdődik.</p>
                   <div class="animation section-divider"></div>
+                  <br></br>
+                  <h1 id="activation"><a href="index.html#"><h2>Lépj be a jővőbe</h2></a></h1>
                 </div>
               </div>
               <!-- /setion header -->
@@ -84,25 +113,25 @@
                     <div class="row">
                       <div class="col-xs-3 col-countdown">
                         <div class="countdown-section">
-                          <div class="countdown-amount days"></div>
+                          <div class="countdown-amount days" id="cnt_day"></div>
                           <div class="countdown-period days_ref">Nap</div>
                         </div>
                       </div>
                       <div class="col-xs-3 col-countdown">
                         <div class="countdown-section">
-                          <div class="countdown-amount hours"></div>
+                          <div class="countdown-amount hours" id="cnt_hour"></div>
                           <div class="countdown-period hours_ref">Óra</div>
                         </div>
                       </div>
                       <div class="col-xs-3 col-countdown">
                         <div class="countdown-section">
-                          <div class="countdown-amount minutes"></div>
+                          <div class="countdown-amount minutes" id="cnt_min"></div>
                           <div class="countdown-period minutes_ref">Perc</div>
                         </div>
                       </div>
                       <div class="col-xs-3 col-countdown">
                         <div class="countdown-section">
-                          <div class="countdown-amount seconds"></div>
+                          <div class="countdown-amount seconds" id="cnt_sec"></div>
                           <div class="countdown-period seconds_ref">Másodperc</div>
                         </div>
                       </div>
@@ -165,6 +194,7 @@
   <script src='assets/js/vendor/vendor.js'></script>
   <script src='assets/js/variable.js'></script>
   <script src='assets/js/main.js'></script>
+  <script src='assets/js/activation.js'></script>
   <!-- /script -->
 
 </body>
