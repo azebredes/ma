@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<!--[if lt IE 9 ]><html class="ie ie-lt9 no-js" lang="en"><![endif]-->
+<!--[if IE 9 ]><html class="ie ie9 no-js" lang="en"><![endif]-->
+<!--[if gt IE 9 | !IE]><!-->
+<html class="no-js fixed" lang="en">
+<!--<![endif]-->
+<head>
+<meta property="og:url"                content="https://azebredes.github.io/most/" />
+<meta property="og:type"               content="article" />
+<meta property="og:title"              content="Az Ébredés" />
+<meta property="og:description"        content="Történelmi pillanat, mely minden ember életét gyökeresen meg fogja változtatni." />
+<meta property="og:image"              content="https://raw.githubusercontent.com/azebredes/most/master/assets/img/bg/br.jpg" />
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="">
+<title>Az Ébredés - 2016.09.01</title>
+<link rel='stylesheet' href='assets/css/bootstrap.min.css'>
+<link rel='stylesheet' href='assets/css/style.css'>
+<link rel='stylesheet' href='assets/css/color.css'>
+<link rel='stylesheet' href='assets/css/custom.css'>
+<link rel="icon" href="assets/img/favicon.ico">
+</head>
+<body>
+
+  <!-- loader -->
+  <div id="site-loader">
+    <div class="loader"></div>
+  </div>
+  <!-- loader -->
+
+  <!-- site wrap -->
+  <div id="site-wrap">
+
+    <!-- backgeound -->
+    <div id="bg">
+      <div id="img"></div>
+      <div id="video"></div>
+      <div id="overlay"></div>
+      <div id="effect">
+        <img src="assets/img/bg/cloud-01.png" alt="" id="cloud1">
+        <img src="assets/img/bg/cloud-02.png" alt="" id="cloud2">
+        <img src="assets/img/bg/cloud-03.png" alt="" id="cloud3">
+        <img src="assets/img/bg/cloud-04.png" alt="" id="cloud4">
+      </div>
+      <canvas id="js-canvas"></canvas>
+    </div>
+    <!-- /background -->
+
+    <!-- site header -->
+    <header id="site-header">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-12">
+            <!-- header brand -->
+            <div class="header-brand">
+          <iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Ftinyurl.com%2Febredes&width=206&layout=button_count&action=like&size=small&show_faces=true&share=true&height=46&appId" width="206" height="46" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+            <!-- header brand -->
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- /site header -->
+
+    <!-- site main -->
+    <main id="site-main">
+      <!-- home -->
+      <section id="home">
+        <div class="section-wrap">
+          <div class="section-cell">
+            <div class="container">
+              <!-- section header -->
+              <div class="section-header row text-center">
+                <div class="col-xs-12">
+                  <p class="animation section-subtitle">Készülj, a bejelentés hamarosan érkezik.</p>
+                  <h1 class="section-title">Az Ébredés</h1>
+                  <p class="animation section-subtitle">mindenki élete megváltozik, új időszámítás kezdődik.</p>
+                  <div class="animation section-divider"></div>
+                </div>
+              </div>
+              <!-- /setion header -->
+
+              <!-- section main -->
+              <div class="section-main row">
+                <div class="col-xs-12">
+                  <!-- countdown -->
+                  <div id="countdown" class="animation-04">
+                    <div class="row">
+                      <div class="col-xs-3 col-countdown">
+                        <div class="countdown-section">
+                          <div class="countdown-amount days"></div>
+                          <div class="countdown-period days_ref">Nap</div>
+                        </div>
+                      </div>
+                      <div class="col-xs-3 col-countdown">
+                        <div class="countdown-section">
+                          <div class="countdown-amount hours"></div>
+                          <div class="countdown-period hours_ref">Óra</div>
+                        </div>
+                      </div>
+                      <div class="col-xs-3 col-countdown">
+                        <div class="countdown-section">
+                          <div class="countdown-amount minutes"></div>
+                          <div class="countdown-period minutes_ref">Perc</div>
+                        </div>
+                      </div>
+                      <div class="col-xs-3 col-countdown">
+                        <div class="countdown-section">
+                          <div class="countdown-amount seconds"></div>
+                          <div class="countdown-period seconds_ref">Másodperc</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /countdown -->
+                </div>
+              </div>
+              <!-- /setion main -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /home -->
+
+    </main>
+    <!-- /site main -->
+
+    <!-- site footer -->
+    <footer id="site-footer">
+      <!-- footer social -->
+      <a href="index.html#" id="volume">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+      <div id="footer-social">
+        <a href="https://youtu.be/dmBtvbRjXVU" title="" target="_blank"><i class="ion-social-youtube"></i></a>
+        <a href="https://www.facebook.com/events/259529141099440" title="" target="_blank"><i class="ion-social-facebook"></i></a>
+      </div>
+      <!-- /footer social -->
+    </footer>
+    <!-- /site footer -->
+
+    <!-- audio -->
+    <audio id="audio-player" loop>
+      <source src="assets/audio/audio.mp3" type="audio/mpeg">
+    </audio>
+    <!-- audio -->
+  </div>
+  <!-- /site wrap -->
+
+  <!-- script -->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-67804007-4', 'auto');
+  ga('send', 'pageview');
+
+  </script>
+  <script src='assets/js/vendor/jquery-2.1.4.min.js'></script>
+  <!--[if lte IE 9]><!-->
+  <script src='assets/js/vendor/html5shiv.min.js'></script>
+  <!--<![endif]-->
+  <script src='assets/js/vendor/bootstrap.min.js'></script>
+  <script src='assets/js/vendor/vendor.js'></script>
+  <script src='assets/js/variable.js'></script>
+  <script src='assets/js/main.js'></script>
+  <!-- /script -->
+
+</body>
+</html>
