@@ -1,10 +1,4 @@
-var id = "activation"
-
-CountDownTimer(id);
-
-var activation = document.getElementById(id);
-hide(activation);
-activation.innerHTML = '';
+CountDownTimer();
 
 var countdown = document.getElementById("countdown");
 hide(countdown);
@@ -21,9 +15,9 @@ function hide(element) {
 }
 
 function fadeout(element) {
-    var op = 1;  // initial opacity
+    var op = 1;
     var timer = setInterval(function () {
-        if (op <= 0.1){
+        if (op <= 0.01){
             clearInterval(timer);
             hide(element);
             return;
@@ -51,7 +45,7 @@ function fadein(element) {
     }, 10);
 }
 
-    function CountDownTimer(id)
+    function CountDownTimer()
     {
         var timer;
             
@@ -69,10 +63,7 @@ function fadein(element) {
             	} else {
             		document.getElementById("countdown").innerHTML = '';
             	}
-            	var element = document.getElementById(id);
             	setTimeout(function() {
-    				//element.innerHTML = '<a href="index.html#"><h2>Lépj be a jővőbe</h2></a>';
-                	//fadein(element)
                     fadein(menu1)
                     fadein(menu2)
                     fadein(menu3)
@@ -80,16 +71,10 @@ function fadein(element) {
                 return;
             } else {
             	fadein(countdown);
-            	activation.innerHTML = '';
             }
         }
 
 		setTimeout(function() {
 			timer = setInterval(showRemaining, 1000);
 		}, 500);
-        setTimeout(function() {
-            //fadein(menu1)
-            //fadein(menu2)
-            //fadein(menu3)
-        }, 2500);
     }
