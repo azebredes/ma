@@ -24,8 +24,8 @@ function fadeout(element) {
         }
         element.style.opacity = op;
         element.style.filter = 'alpha(opacity=' + op * 100 + ")";
-        op -= op * 0.1;
-    }, 50);
+        op -= op * 0.05;
+    }, 20);
 }
 
 function fadein(element) {
@@ -67,7 +67,7 @@ function fadein(element) {
                     fadein(menu1)
                     fadein(menu2)
                     fadein(menu3)
-				}, 2000);
+				}, 1500);
                 return;
             } else {
             	fadein(countdown);
