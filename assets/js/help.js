@@ -1,5 +1,6 @@
 var help = document.getElementById("help");
-help.innerHTML =    '<p class="animation section-subtitle">Együtt törjük át a végső határt</p>' +
+help.innerHTML =    '<br>' +
+                    '<p class="animation section-subtitle">Együtt törjük át a végső határt</p>' +
                     '<h1 class="section-title">Az Ébredés</h1>' +
                     '<p class="animation section-subtitle">' +
                     '<h4><b>1. fázis (0-5. nap – 30 nappal az indulás előtt)</b></h4>' +
