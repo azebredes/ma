@@ -1,12 +1,11 @@
-var id = "activation"
-
-CountDownTimer(id);
-
-var activation = document.getElementById(id);
-hide(activation);
+CountDownTimer();
 
 var countdown = document.getElementById("countdown");
 hide(countdown);
+var menu1 = document.getElementById("menu1");
+hide(menu1);
+var menu2 = document.getElementById("menu2");
+hide(menu2);
 
 function hide(element) {
     element.style.opacity = 0;
@@ -14,25 +13,25 @@ function hide(element) {
 }
 
 function fadeout(element) {
-    var op = 1;  // initial opacity
+    var op = 1;
     var timer = setInterval(function () {
-        if (op <= 0.1){
+        if (op <= 0.01){
             clearInterval(timer);
             hide(element);
             return;
         }
         element.style.opacity = op;
         element.style.filter = 'alpha(opacity=' + op * 100 + ")";
-        op -= op * 0.1;
-    }, 50);
+        op -= op * 0.05;
+    }, 20);
 }
 
 function fadein(element) {
-	if(element.style.opacity >=  0.2)
+	if(element.style.display == 'block')
 	{
 		return;
 	}
-    var op = 0.05;  // initial opacity
+    var op = 0.005;  // initial opacity
     element.style.display = 'block';
     var timer = setInterval(function () {
         if (op >= 1){
@@ -41,10 +40,10 @@ function fadein(element) {
         element.style.opacity = op;
         element.style.filter = 'alpha(opacity=' + op * 100 + ")";
         op += op * 0.05;
-    }, 20);
+    }, 10);
 }
 
-    function CountDownTimer(id)
+    function CountDownTimer()
     {
         var timer;
             
@@ -62,15 +61,13 @@ function fadein(element) {
             	} else {
             		document.getElementById("countdown").innerHTML = '';
             	}
-            	var element = document.getElementById(id);
             	setTimeout(function() {
-    				element.innerHTML = '<a href="index.html#"><h2>Lépj be a jővőbe</h2></a>';
-                	fadein(element)
-				}, 2000);
+                    fadein(menu1)
+                    fadein(menu2)
+				}, 1500);
                 return;
             } else {
             	fadein(countdown);
-            	activation.innerHTML = '';
             }
         }
 
