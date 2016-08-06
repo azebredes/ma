@@ -2,6 +2,8 @@
 <!--[if lt IE 9 ]><html class="ie ie-lt9 no-js" lang="en"><![endif]-->
 <!--[if IE 9 ]><html class="ie ie9 no-js" lang="en"><![endif]-->
 <!--[if gt IE 9 | !IE]><!-->
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
 <html class="no-js fixed" lang="en">
 <!--<![endif]-->
 <head>
@@ -23,7 +25,7 @@
 <link rel='stylesheet' href='assets/css/custom.css'>
 <link rel="icon" href="assets/img/favicon.ico">
 </head>
-<body>
+<body ng-app="awaApp">
 
   <!-- loader -->
   <div id="site-loader">
@@ -53,12 +55,12 @@
               <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fazebredes.github.io%2Fma%2F&width=206&layout=button_count&action=like&size=small&show_faces=true&share=true&height=46&appId" width="206" height="46" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
             </div>
             <!-- header brand -->
-            <!-- header toggle
+            <!-- header toggle -->
             <div class="header-toggle">
               <div id="menu-toggle" class="toggle">
                 <i class="ion-help"></i>
               </div>
-            </div>-->
+            </div>
             <!-- /header toggle -->
           </div>
         </div>
@@ -69,18 +71,29 @@
     <!-- info panel -->
     <div id="form">
       <div id="subscribe">
-        <div class="tb-cell">
-          <p class="animation section-subtitle">Együtt törjük át a végső határt.</p>
-          <h2 class="section-title">Az ébredés</h2>
-          <p class="animation section-subtitle">
-            Légy részese az emberiség utolsó mérföldkövének! 2016 szeptember elsején indul ‘Az Ébredés’ világrengető eseménysorozata, mely minden ember életét gyökeresen meg fogja változtatni, nincsenek kivételek. Az általunk ismert világkép alapjaiban esik darabjaira és áll össze újra, immáron a magasabb dimenziósíkú, egységes és tudatlanságtól mentes állapotában.
-          </p>
-          <div class="animation section-divider"></div>
-          <p class="animation section-subtitle">
-            Minden vallási nézet, hitvita, eredetünkről alkotott elméletek és az életünk részét képező 'idegen’ fajokról birtokolt tudásunk egy eddig sosem látott tényfeltáró eseményláncolat eredményeként teljesen át fog értékelődni. Minden eddigi feltételezésünk, amelyek meghatározták a hétköznapi életet hazugságon alapultak, ezen hamis tézisekkel és az igazság feltárásával kínálkozik az esemény. Az Ébredés közeledtéig még több információt fogok közölni, ez lesz AZ A NAP, amit az unokáinknak is mesélni fogunk, légy te is a történelem része és kövesd figyelemmel az első sorból nézve az emberiség következő szintre emelkedését
-          </p>
-          <div class="animation section-divider"></div>
-        </div>
+      <section id="home">
+        <div class="section-wrap">
+          <div class="section-cell">
+            <div class="container">
+              <!-- section header -->
+              <div class="section-header row text-center">
+                <!-- subscribe form -->
+                <div id="form-subscribe" class="form-lg container">
+                  <form action="https://github.us1.list-manage.com/subscribe/post?u=337676ecab0ff8cda54074819&amp;id=3b5779f4ff" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" validate>
+                    <input type="email" value="" name="EMAIL" class="form-control required email" id="mce-EMAIL" placeholder="E-mail feliratkozás">
+                    <button type="submit" id="mc-embedded-subscribe">
+                      <i class="ion-email"></i>
+                    </button>
+                  </form>
+                </div>
+                <!-- /subscribe form -->
+                <div id="help" class="col-xs-12"></div>
+                </div>
+                <!-- /setion header -->
+              </div>
+            </div>
+          </div>
+      </section>
       </div>
     </div>
     <!-- /info panel -->
@@ -100,7 +113,20 @@
                   <p class="animation section-subtitle">mindenki élete megváltozik, új időszámítás kezdődik.</p>
                   <div class="animation section-divider"></div>
                   <br></br>
-                  <h1 id="activation"><a href="index.html#"><h2>Lépj be a jővőbe</h2></a></h1>
+                      <div class="col-xs-6">
+                        <h4 id="menu1"><a href="index.html#">Hírek</a></h4>
+                      </div>
+                      <div class="col-xs-6">
+                        <h4 id="menu2"><a href="index.html#" ng-click="showConsole = !showConsole">Élő közvetítés</a></h4>
+                      </div>
+                      <div ng-show="showConsole" class="shell-wrap shell-div">
+                        <p class="shell-top-bar">azebredes.github.io/git/galaxy/channel/output/</p>
+                        <ul ng-show="showConsole" class="shell-body">
+                          <li>cd&nbsp;/azebredes.github.io/ma/git/galaxy/channel/output/</li>
+                          <li>csatlakozás...</li>
+                        <li><span class="console-write" id="consoletext1"></span></li>
+                        </ul>
+                      </div>
                 </div>
               </div>
               <!-- /setion header -->
@@ -160,7 +186,7 @@
         <span></span>
       </a>
       <div id="footer-social">
-        <a href="https://youtu.be/dmBtvbRjXVU" title="" target="_blank"><i class="ion-social-youtube"></i></a>
+        <a href="https://www.youtube.com/watch?v=dmBtvbRjXVU&list=PLepYBCyT5P9xKk9hxtU8D9oqyvYS1mrxf" title="" target="_blank"><i class="ion-social-youtube"></i></a>
         <a href="https://www.facebook.com/events/259529141099440" title="" target="_blank"><i class="ion-social-facebook"></i></a>
       </div>
       <!-- /footer social -->
@@ -193,6 +219,8 @@
   <script src='assets/js/vendor/bootstrap.min.js'></script>
   <script src='assets/js/vendor/vendor.js'></script>
   <script src='assets/js/variable.js'></script>
+  <script src='assets/js/help.js'></script>
+  <script src='assets/js/console.js'></script>
   <script src='assets/js/main.js'></script>
   <script src='assets/js/music.js'></script>
   <script src='assets/js/activation.js'></script>
