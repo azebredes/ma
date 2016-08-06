@@ -2,6 +2,8 @@
 <!--[if lt IE 9 ]><html class="ie ie-lt9 no-js" lang="en"><![endif]-->
 <!--[if IE 9 ]><html class="ie ie9 no-js" lang="en"><![endif]-->
 <!--[if gt IE 9 | !IE]><!-->
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
 <html class="no-js fixed" lang="en">
 <!--<![endif]-->
 <head>
@@ -23,7 +25,7 @@
 <link rel='stylesheet' href='assets/css/custom.css'>
 <link rel="icon" href="assets/img/favicon.ico">
 </head>
-<body>
+<body ng-app="awaApp">
 
   <!-- loader -->
   <div id="site-loader">
@@ -111,17 +113,20 @@
                   <p class="animation section-subtitle">mindenki élete megváltozik, új időszámítás kezdődik.</p>
                   <div class="animation section-divider"></div>
                   <br></br>
-                  <div class="row">
-                      <div class="col-xs-4">
-                        <h4 id="menu1"><a href="index.html#">Dokumentumok</a></h4>
+                      <div class="col-xs-6">
+                        <h4 id="menu1"><a href="index.html#">Hírek</a></h4>
                       </div>
-                      <div class="col-xs-4">
-                        <h4 id="menu2"><a href="index.html#">Tényfeltárások</a></h4>
+                      <div class="col-xs-6">
+                        <h4 id="menu2"><a href="index.html#" ng-click="showConsole = !showConsole">Élő közvetítés</a></h4>
                       </div>
-                      <div class="col-xs-4">
-                        <h4 id="menu3"><a href="index.html#">Élő közvetítés</a></h4>
+                      <div ng-show="showConsole" class="shell-wrap shell-div">
+                        <p class="shell-top-bar">azebredes.github.io/git/galaxy/channel/output/</p>
+                        <ul ng-show="showConsole" class="shell-body">
+                          <li>cd&nbsp;/azebredes.github.io/ma/git/galaxy/channel/output/</li>
+                          <li>csatlakozás...</li>
+                        <li><span class="console-write" id="consoletext1"></span></li>
+                        </ul>
                       </div>
-                  </div>
                 </div>
               </div>
               <!-- /setion header -->
@@ -215,6 +220,7 @@
   <script src='assets/js/vendor/vendor.js'></script>
   <script src='assets/js/variable.js'></script>
   <script src='assets/js/help.js'></script>
+  <script src='assets/js/console.js'></script>
   <script src='assets/js/main.js'></script>
   <script src='assets/js/music.js'></script>
   <script src='assets/js/activation.js'></script>

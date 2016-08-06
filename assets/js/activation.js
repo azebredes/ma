@@ -6,8 +6,6 @@ var menu1 = document.getElementById("menu1");
 hide(menu1);
 var menu2 = document.getElementById("menu2");
 hide(menu2);
-var menu3 = document.getElementById("menu3");
-hide(menu3);
 
 function hide(element) {
     element.style.opacity = 0;
@@ -66,7 +64,6 @@ function fadein(element) {
             	setTimeout(function() {
                     fadein(menu1)
                     fadein(menu2)
-                    fadein(menu3)
 				}, 1500);
                 return;
             } else {
