@@ -119,6 +119,14 @@
                       <div class="col-xs-6">
                         <h4 id="menu2"><a href="" ng-click="showConsole = !showConsole">Élő közvetítés</a></h4>
                       </div>
+                      <div ng-show="showConsole" class="shell-wrap shell-div">
+                        <p class="shell-top-bar">azebredes.github.io/git/galaxy/channel/output/</p>
+                        <ul ng-show="showConsole" class="shell-body">
+                          <li>cd&nbsp;/azebredes.github.io/ma/git/galaxy/channel/output/</li>
+                          <li>csatlakozás...</li>
+                        <li><span class="console-write" id="consoletext1"></span></li>
+                        </ul>
+                      </div>
                 </div>
               </div>
               <!-- /setion header -->
