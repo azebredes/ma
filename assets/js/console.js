@@ -1,15 +1,17 @@
      var app = angular.module('awaApp', ['ngAnimate']);
-     app.controller('DoubleController', ['$scope', 
-          function($scope) {
-               $scope.showConsole = false;
-     }]);
+
+
+     var app = angular.module('awaApp', []);
+     app.controller('termCtrl', function($scope) {
+          $scope.showConsole = true;
+     });
      
      function writeConsole(duration, str, lineID, consoleID, delay) {
           setTimeout(function() {
                var n = str.length;
 
                var element = document.getElementById(lineID)
-               element.innerHTML = "";
+               if(element != null) {element.innerHTML = "";}
                var spans = '<span>' + str.split('').join('</span><span>') + '<span class="blinking-cursor"></span></span>';
                $(spans).hide().appendTo('.css-typing').each(function (i) {
                    $(this).delay(100 * i).css({
