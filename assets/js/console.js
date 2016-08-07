@@ -11,14 +11,20 @@ function mainConsole() {
     
   if(cons != null && showConsole)
   {
-    if(ini <= 2)
+    if(ini <= 5)
     {
       if(ini == 0) {
-        writeConsole("Kapcsolat kiépítése........OK", 1);
+        writeConsoleLess("Rendszer inicializálása....OK", 1, '.css-typing2');
       } else if(ini ==1) {
-        writeConsole("Csatlakozás a szerverhez...OK", 0.7);     
+        writeConsoleLess("Lokációs tábla betöltése...OK", 1, '.css-typing3');     
       } else if(ini == 2) {
-        writeConsole("Beérkező adatok fogadása...OK", 1);
+        writeConsoleLess("Kapcsolat kiépítése........OK", 1, '.css-typing4');
+      } else if(ini ==3) {
+        writeConsoleLess("Csatlakozás a szerverhez...OK", 1, '.css-typing5');     
+      } else if(ini == 4) {
+        writeConsoleLess("Beérkező adatok fogadása...OK", 1, '.css-typing6');
+      } else if(ini == 5) {
+        writeConsoleLess("-----------------------------", 1, '.css-typing7');
       }
       ini+=1
     } else {
@@ -28,7 +34,13 @@ function mainConsole() {
   }
   else {
     ini = 0
-    resetConsole()
+    resetConsole("consoletext1")
+    resetConsole("din1")
+    resetConsole("din2")
+    resetConsole("din3")
+    resetConsole("din4")
+    resetConsole("din5")
+    resetConsole("din6")
     setTimeout(function() {
       ini = 0
       mainConsole()
@@ -38,17 +50,21 @@ function mainConsole() {
 
 setTimeout(function() {
           mainConsole()
-}, 2000)
+}, 4000)
 
-function resetConsole() {
-  var element = document.getElementById("consoletext1")
+function resetConsole(id) {
+  var element = document.getElementById(id)
   if(element != null) {
     element.innerHTML = "";
   }
 }
-     
+
+function getRandom(min, max) {
+  return Math.floor((Math.random() * max) + min);
+}
+
 function writeConsole(str, delay) {
-    resetConsole()
+    resetConsole("consoletext1")
     var spans = '<span>' + str.split('').join('</span><span>') + '<span class="blinking-cursor"></span></span>';
                $(spans).hide().appendTo('.css-typing').each(function (i) {
                    $(this).delay(100 * i).css({
@@ -64,7 +80,24 @@ function writeConsole(str, delay) {
         mainConsole()
       }, delay);
 }
-     
+
+function writeConsoleLess(str, delay, className) {
+  var random = getRandom(10, 80)
+    var spans = '<span>' + str.split('').join('</span><span>') + '</span>';
+               $(spans).hide().appendTo(className).each(function (i) {
+                   $(this).delay(random * i).css({
+                       display: 'inline',
+                       opacity: 0
+                   }).animate({
+                       opacity: 1
+                   }, random);
+               });
+
+      delay *= str.length * random + 2
+      setTimeout(function() {
+        mainConsole()
+      }, delay);
+}
 
      //writeConsole(5, "azebredes.github.io sadsadasdsads Almafa2 almafa1 Almafa2 almafa1", "consoletext1", "consoleID1", 0);
      //writeConsole(5, "github.io sadsadasdsads Almafa2 almafa1 Almafa2 almafa1", "consoletext1", "consoleID1", 5 * 1000);
