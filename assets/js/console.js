@@ -28,8 +28,7 @@ function mainConsole() {
       }
       ini+=1
     } else {
-      var str = "azebredes.github.io sadsadasdsads Almafa2 almafa1 Almafa2 almafa1"
-      writeConsole(str, 1.5);
+      writeConsole(getData(), 1.5);
     }
   }
   else {
@@ -76,6 +75,7 @@ function writeConsole(str, delay) {
                });
 
       delay *= str.length * 100 + 2
+      delay += 1000
       setTimeout(function() {
         mainConsole()
       }, delay);
