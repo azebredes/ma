@@ -49,8 +49,8 @@ function mainConsole() {
 }
 
 setTimeout(function() {
-          mainConsole()
-}, 4000)
+  mainConsole()
+}, 5000)
 
 function resetConsole(id) {
   var element = document.getElementById(id)
