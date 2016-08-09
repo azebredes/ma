@@ -1,5 +1,5 @@
 var DATA = [
-     "A Cobra eltitkolja."
+     "A Cobra hazudik."
 ,    "Mélyre kell ásni. Nem csak magadban, a Földben is."
 ,    "A sötétből Fény lesz."
 ,    "Veszitek? Remélem célba ér az üzenet."

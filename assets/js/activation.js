@@ -53,6 +53,7 @@ function fadein(element) {
             var sec = document.getElementById('cnt_sec').innerHTML;
             if (days == '' || (days == '00' && hour == '00' && min == '00' && sec == '00'))
             {
+                var extraDelay = 0
             	clearInterval(timer);
                 if(days != '')
             	{
@@ -62,6 +63,7 @@ function fadein(element) {
                         document.getElementById("countdown").innerHTML = '';
                         document.getElementById("headupper").innerHTML = '';
                     }, 2500);
+                    extraDelay += 1500
             	} else {
             		document.getElementById("countdown").innerHTML = '';
                     document.getElementById("headupper").innerHTML = '';
@@ -71,7 +73,7 @@ function fadein(element) {
                     fadein(menu2);
                     fadein(ch);
                     fadein(cb);
-				}, 1500);
+				}, 1500 + extraDelay);
                 return;
             } else {
             	fadein(countdown);
