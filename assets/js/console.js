@@ -9,7 +9,7 @@ function mainConsole() {
   var cons = document.getElementById("ch")
   var showConsole = angular.element(document.querySelector('[ng-controller="termCtrl"]')).scope().showConsole
     
-  if(cons != null && showConsole)
+  if(cons != null && showConsole && itsTime)
   {
     if(ini <= 5)
     {

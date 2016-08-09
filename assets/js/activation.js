@@ -1,3 +1,4 @@
+var itsTime = false
 CountDownTimer();
 
 hide(document.getElementById("countdown"));
@@ -55,6 +56,7 @@ function fadein(element) {
             {
                 var extraDelay = 0
             	clearInterval(timer);
+                itsTime = true
                 if(days != '')
             	{
             		fadeout(document.getElementById("countdown"));
