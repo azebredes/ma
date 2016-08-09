@@ -1288,7 +1288,7 @@ section {
 12 - Console
 ==================================================*/
 .shell-div {
-  transition: all linear 0.5s;
+  transition: all linear 0.0s;
   background-color: #141414;
   height: 20%;
 }
