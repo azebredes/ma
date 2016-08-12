@@ -1,11 +1,11 @@
+var itsTime = false
 CountDownTimer();
 
-var countdown = document.getElementById("countdown");
-hide(countdown);
-var menu1 = document.getElementById("menu1");
-hide(menu1);
-var menu2 = document.getElementById("menu2");
-hide(menu2);
+hide(document.getElementById("countdown"));
+hide(document.getElementById("menu1"));
+hide(document.getElementById("menu2"));
+hide(document.getElementById("ch"));
+hide(document.getElementById("cb"));
 
 function hide(element) {
     element.style.opacity = 0;
@@ -54,17 +54,28 @@ function fadein(element) {
             var sec = document.getElementById('cnt_sec').innerHTML;
             if (days == '' || (days == '00' && hour == '00' && min == '00' && sec == '00'))
             {
+                var extraDelay = 0
             	clearInterval(timer);
+                itsTime = true
                 if(days != '')
             	{
-            		fadeout(document.getElementById("countdown"))
+            		fadeout(document.getElementById("countdown"));
+                    fadeout(document.getElementById("headupper"));
+                    setTimeout(function() {
+                        document.getElementById("countdown").innerHTML = '';
+                        document.getElementById("headupper").innerHTML = '';
+                    }, 2500);
+                    extraDelay += 1500
             	} else {
             		document.getElementById("countdown").innerHTML = '';
+                    document.getElementById("headupper").innerHTML = '';
             	}
             	setTimeout(function() {
-                    fadein(menu1)
-                    fadein(menu2)
-				}, 1500);
+                    fadein(menu1);
+                    fadein(menu2);
+                    fadein(ch);
+                    fadein(cb);
+				}, 1500 + extraDelay);
                 return;
             } else {
             	fadein(countdown);

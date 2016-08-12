@@ -25,7 +25,7 @@
 <link rel='stylesheet' href='assets/css/custom.css'>
 <link rel="icon" href="assets/img/favicon.ico">
 </head>
-<body ng-app="awaApp">
+<body ng-app="awaApp" ng-controller="termCtrl">
 
   <!-- loader -->
   <div id="site-loader">
@@ -108,25 +108,12 @@
               <!-- section header -->
               <div class="section-header row text-center">
                 <div class="col-xs-12">
-                  <p class="animation section-subtitle">Készülj, a bejelentés hamarosan érkezik.</p>
+                  <div id="headupper">
+                    <p class="animation section-subtitle">Készülj, a bejelentés hamarosan érkezik.</p>
+                  </div>
                   <h1 class="section-title">Az Ébredés</h1>
                   <p class="animation section-subtitle">mindenki élete megváltozik, új időszámítás kezdődik.</p>
                   <div class="animation section-divider"></div>
-                  <br></br>
-                      <div class="col-xs-6">
-                        <h4 id="menu1"><a href="">Hírek</a></h4>
-                      </div>
-                      <div class="col-xs-6">
-                        <h4 id="menu2"><a href="" ng-click="showConsole = !showConsole">Élő közvetítés</a></h4>
-                      </div>
-                      <div ng-show="showConsole" class="shell-wrap shell-div">
-                        <p class="shell-top-bar">azebredes.github.io/git/galaxy/channel/output/</p>
-                        <ul ng-show="showConsole" class="shell-body">
-                          <li>cd&nbsp;/azebredes.github.io/ma/git/galaxy/channel/output/</li>
-                          <li>csatlakozás...</li>
-                        <li><span class="console-write" id="consoletext1"></span></li>
-                        </ul>
-                      </div>
                 </div>
               </div>
               <!-- /setion header -->
@@ -164,6 +151,49 @@
                     </div>
                   </div>
                   <!-- /countdown -->
+                  <div class="section-header row text-center">
+                    <div class="col-xs-6">
+                      <h4 id="menu1"><a href="" ng-click="showConsole = false">Hírek</a></h4>
+                    </div>
+                    <div class="col-xs-6">
+                      <h4 id="menu2"><a href="" ng-click="showConsole = true">Közvetítés</a></h4>
+                    </div>
+                    <div id="ch" ng-show="showConsole" class="shell-wrap shell-div ng-hide">
+                      <p class="shell-top-bar">/git/galaxy/channel/output/</p>
+                      <ul id="cb" ng-show="showConsole" class="shell-body ng-hide">
+                        <li id="din1" class="css-typing2"></li>
+                        <li id="din2" class="css-typing3"></li>
+                        <li id="din3" class="css-typing4"></li>
+                        <li id="din4" class="css-typing5"></li>
+                        <li id="din5" class="css-typing6"></li>
+                        <li id="din6" class="css-typing7"></li>
+                        <li><span id="consoletext1" class="css-typing"></span></li>
+                        <br></br>
+                      </ul>
+                    </div>
+                    <div ng-show="!showConsole" class="shell-wrap shell-div">
+                      <p class="shell-top-bar">2016.09.01 - Innovációs Forradalom</p>
+                      <ul ng-show="!showConsole" class="shell-body">
+                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li><br>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt uteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li><br>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidfficia deserunt mollit anim id est laborum.</li>
+                      </ul>
+                    </div>
+
+                    <div ng-show="!showConsole" class="shell-wrap shell-div">
+                      <p class="shell-top-bar">2016.09.01 - Terjezkedés</p>
+                      <ul ng-show="!showConsole" class="shell-body">
+                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
+                      </ul>
+                    </div>
+
+                    <div ng-show="!showConsole" class="shell-wrap shell-div">
+                      <p class="shell-top-bar">2016.09.01 - A Bejelentés</p>
+                      <ul ng-show="!showConsole" class="shell-body">
+                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </div>
               <!-- /setion main -->
@@ -220,6 +250,7 @@
   <script src='assets/js/vendor/vendor.js'></script>
   <script src='assets/js/variable.js'></script>
   <script src='assets/js/help.js'></script>
+  <script src='assets/js/style.js'></script>
   <script src='assets/js/console.js'></script>
   <script src='assets/js/main.js'></script>
   <script src='assets/js/music.js'></script>
