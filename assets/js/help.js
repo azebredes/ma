@@ -1,6 +1,13 @@
 var help = document.getElementById("help");
 help.innerHTML =    '<br>' +
                     '<p class="animation section-subtitle">Együtt törjük át a végső határt</p>' +
+                    '<br>' +
+                    'Emberek állnak az utcán, nem feltétlenül gazdagok s nem is szegények, nézik egymást, boldogtalanok. Nézik a boldog embereket, ők nem lesznek azok. Boldogságra vágynak. Nem lesz nekik. Nem tudják felépíteni. Magukban. Van néhány ember, akik ott állnak szintén és összeáll bennük, hogy hogyan lesznek boldogok. Fel lehet tenni a kérdést, hogy kik vagyunk. Van lehetőség a jövőben ezt megcsinálni és felépül bennünk. Hatalmas változás előtt vagyunk!' +
+                    '<br></br>' +
+                    'Az Ébredés először a világon megkísérli minden ember, még az idegenek világait is egyesíteni. Korábban ilyet még senki sem csinált és nem is fog, több millió objektum szimultán Ébredésének stimulálásához szükséges tudás nincs meg senki másban, ez biztos. Azzal, hogy bevonjuk őket, egy új világot teremtünk. Azzal, hogy felfedünk olyan titkokat, melyeket eddig még soha senki nem mert, azért van, mert a tudás megszerzése létkérdés.' +
+                    '<br></br>' +
+                    'Birtokában vagyunk annak az egyetemes tudásnak, melynek eredetéről a legbefolyásosabb hatalmak nem szeretnék, hogy napvilágra kerüljön. Olyan eszközrendszer szolgáltatásait élvezzük, melynek segítségével észlelni és láttatni is tudjuk ezeket a dolgokat. Az innovációs technológiáról jelen pillanatban nem árulhatok el többet, de az Ébredés után mindenki a saját bőrén fogja tapasztalni, ki tudja majd próbálni, az élete részévé válik s ezáltal ő maga részévé is.. Egy minőségileg jobb szellemi kondíciót biztosít majd az embereknek és olyan tudásra tesznek szert, melyről eddig álmodni sem mertek.' +
+                    '<br></br>' +
                     '<h1 class="section-title">Az Ébredés - fázisok</h1>' +
                     '<p class="animation section-subtitle">' +
                     '<h4><b>1. fázis (0-5. nap – 30 nappal az indulás előtt)</b></h4>' +
