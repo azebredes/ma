@@ -51,6 +51,15 @@ var DATA = [
 ,	 "Ellenséges fellépés nem tapasztalható."
 ,	 "Az emberiség jövője a magyarok kezében van."
 ,	 "Itt vagyunk. Jelentést kérek!"
+,	 "Obama, Putyin és Merkel galaktikus főkancellár 'nekik' dolgozik."
+,	 "Összel kezdődik majd."
+,	 "A nyomodban vannak!"
+,	 ""
+,	 ""
+,	 ""
+,	 "Ne bízzatok meg a gyapjas alakváltókban!"
+,	 "A Balaton vize erősen szennyezett, népírtás."
+,	 "Vadásznak rád, menekülj!"
 ,	 "A hivatalos űrjegyzék szerint a 2092 CA4 érintetlen. Q2-es besorolású fémlelőhely. Kizárólagos kiaknázási jog tulajdonosa: Supra Mars Corp."
 ];
 var CACHE = [];
@@ -81,9 +90,9 @@ function getData() {
 		CACHE.push(index)
 
 		var rand = getRandom(0, 15)
-		if(rand < 2) {
+		if(rand < 1) {
 			return Base64.encode(DATA[index])
-		} else if (rand < 3) {
+		} else if (rand < 2) {
 			return textToBin(DATA[index])
 		}
 		return DATA[index]
