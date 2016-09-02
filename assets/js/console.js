@@ -98,7 +98,3 @@ function writeConsoleLess(str, delay, className) {
         mainConsole()
       }, delay);
 }
-
-     //writeConsole(5, "azebredes.github.io sadsadasdsads Almafa2 almafa1 Almafa2 almafa1", "consoletext1", "consoleID1", 0);
-     //writeConsole(5, "github.io sadsadasdsads Almafa2 almafa1 Almafa2 almafa1", "consoletext1", "consoleID1", 5 * 1000);
-     //writeConsole(5, "Almafa2 almafa1 Almafa2 almafa1 Almafa2 almafa1 Almafa2 almafa1", "consoletext1", "consoleID1", 5 * 2000);
